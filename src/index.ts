@@ -10,6 +10,7 @@ const client = new Bot({
 	partials: [],
 });
 
+
 // Adding a listener for the nodejs' errors not handled.
 process.on('unhandledRejection', error => {
 	client.log('Error not handled !', 1);
