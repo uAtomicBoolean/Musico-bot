@@ -15,6 +15,8 @@ export class Bot extends Client {
 	public commands: commandsArray;
 	private readonly _pluginsPath: string;
 
+	public playlist: Array<unknown>;
+
 	constructor(options: ClientOptions) {
 		super(options);
 		this.commands = new Collection();

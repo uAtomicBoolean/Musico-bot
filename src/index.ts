@@ -1,13 +1,18 @@
-import { GatewayIntentBits, Partials } from 'discord.js';
-import { token, guildId } from '@src/config.json';
-import { Bot } from '@lib/bot';
+import {GatewayIntentBits, Partials} from 'discord.js';
+import {guildId, token} from '@src/config.json';
+import {Bot} from '@lib/bot';
 
 
 // You must use your own intents and partials for the bot to run properly.
 const client = new Bot({
 	intents: [
+		GatewayIntentBits.GuildVoiceStates,
 	],
-	partials: [],
+	partials: [
+		Partials.Channel,
+		Partials.GuildMember,
+		Partials.User,
+	],
 });
 
 
